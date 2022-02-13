@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and Controls Example: Money Printer</title>
+    <style>
+      body {
+        /* Based on systemfontstack.com */
+        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+          segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+          sans-serif;
+        font-size: 16px;
+      }
+
+      main {
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid black;
+        padding: 32px;
+      }
+
+      header {
+        margin-bottom: 32px;
+        border-bottom: 1px solid gray;
+        padding-bottom: 32px;
+      }
+
+      h1 {
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      .description {
+        font-size: 110%;
+        font-style: italic;
+      }
+
+      .row {
+        padding: 4px;
+      }
+
+      input[type="number"] {
+        font-size: 100%;
+      }
+
+      input#dollars {
+        width: 5em;
+      }
+
+      input#cents {
+        width: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>The Money Printer 🖨💸💸💸</h1>
+        <div class="description">(Forms and Controls)</div>
+      </header>
+      <div class="row">
+        Amount of money to print every second: $<input
+          id="dollars"
+          type="number"
+          min="0"
+        />.<input id="cents" type="number" min="0" max="99" />
+      </div>
+      <div class="row">Total printed: $<output id="total"></output></div>
+      <div class="row"><button id="reset-total">Reset total</button></div>
+    </main>
+    <script type="module" src="./main.js"></script>
+    <noscript>This app requires JavaScript to run</noscript>
+  </body>
+</html>
